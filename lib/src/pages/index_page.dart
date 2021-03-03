@@ -34,7 +34,7 @@ class Productos extends StatelessWidget {
         primary: false,
         crossAxisSpacing: 12.0,
         mainAxisSpacing: 15.0,
-        childAspectRatio: 0.7,
+        childAspectRatio: 0.6,
         children: <Widget>[
           _crearBotones(
               context, Images.macbook, 'Macbook', 'Avalible 16th March', 2000),
@@ -81,8 +81,7 @@ class Productos extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Container(
-                  height: 100,
-                  width: 100,
+                  height: 120,
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage(imagen), fit: BoxFit.contain)),
@@ -123,13 +122,6 @@ class Menu extends StatelessWidget {
     'iPhone',
     'iPad',
     'Watch',
-    'Mac',
-    'Mac',
-    'Mac',
-    'Mac',
-    'Mac',
-    'Mac',
-    'Mac',
     'Mac',
   ];
 

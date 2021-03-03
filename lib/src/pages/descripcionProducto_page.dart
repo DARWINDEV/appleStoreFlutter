@@ -10,8 +10,8 @@ class ProductoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
+      body: ListView(
+        physics: BouncingScrollPhysics(),
           children: <Widget>[
             Header(),
             Item(imagen: imagePrice),
@@ -21,7 +21,7 @@ class ProductoPage extends StatelessWidget {
             )
           ],
         ),
-      ),
+
     );
   }
 }
@@ -34,8 +34,7 @@ class Descripcion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: double.infinity,
-        height: MediaQuery.of(context).size.height * 0.44,
+        width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
             color: Color(0xff131114),
             borderRadius: BorderRadius.only(
@@ -62,7 +61,7 @@ class Descripcion extends StatelessWidget {
                       fontSize: 16, color: Color(0xffFFFFFF).withOpacity(0.5)),
                 )),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40),
+              padding: const EdgeInsets.only(left: 40, right: 40, bottom: 50),
               child: Row(
                 children: <Widget>[
                   Container(
@@ -88,6 +87,7 @@ class Descripcion extends StatelessWidget {
                   ),
                 ],
               ),
+              
             )
           ],
         ));
@@ -105,7 +105,6 @@ class Item extends StatelessWidget {
           child: Padding(
         padding: const EdgeInsets.all(30),
         child: Container(
-          width: 300,
           height: 300,
           decoration: BoxDecoration(
               image: DecorationImage(
